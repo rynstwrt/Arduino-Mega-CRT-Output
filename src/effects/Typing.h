@@ -1,8 +1,8 @@
 #include <Arduino.h>
-// #ifndef EFFECT_H
-// #define EFFECT_H
-// #include <Effect.h>
-// #endif
+#ifndef EFFECT_H
+#define EFFECT_H
+#include <Effect.h>
+#endif
 #include <../lib/TVoutfonts/fontALL.h>
 
 class Typing : public Effect 

@@ -1,4 +1,7 @@
-#include <Arduino.h>
+#ifndef EFFECT_H
+#define EFFECT_H
+#include <Effect.h>
+#endif
 
 class Pixels : public Effect
 {

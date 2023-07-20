@@ -15,7 +15,7 @@
 #define SERIAL_BAUD_RATE 500000
 #define WIDTH 128
 #define HEIGHT 96
-#define ACTIVE_EFFECT_INDEX 7
+#define ACTIVE_EFFECT_INDEX 3
 
 TVout TV;
 EffectEngine* fxManager;

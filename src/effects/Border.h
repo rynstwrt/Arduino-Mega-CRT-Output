@@ -1,31 +1,21 @@
-// #ifndef EFFECT_H
-// #define EFFECT_H
-// #include <Effect.h>
-// #endif
+#ifndef EFFECT_H
+#define EFFECT_H
+#include <Effect.h>
+#endif
 
 class Border : public Effect 
 {
-    private:
-        int padding;
-
     public:
-        Border(EffectData variables, int padding) : Effect(variables) 
-        {
-            this->padding = padding;
-        }
+        Border(EffectData variables) : Effect(variables) { }
 
         void setup()
         {
-            
-            
+            TV.clear_screen();
+            TV.draw_rect(0, 0, width - 1, height - 1, WHITE);
         }
 
         void loop()
         {
-            TV.clear_screen();
-
-            TV.draw_rect(this->padding, this->padding, width - this->padding * 2, height - this->padding * 2, WHITE);
-
             TV.delay(500);
         }
 };

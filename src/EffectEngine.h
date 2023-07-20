@@ -1,5 +1,4 @@
-#include <Effect.h>
-#include <util/EffectUtil.h>
+
 
 #include <effects/Circle.h>
 #include <effects/Lines.h>
@@ -28,11 +27,11 @@ class EffectEngine
                 new Circle(variables),
                 new Lines(variables, 3, 100),
                 new Typing(variables, "HELLO WORLD", 700),
-                new Border(variables, 10),
+                new Border(variables),
                 new Squares(variables, 10, 5, 100),
                 new Equalizer(variables, 5, 15),
                 new Pixels(variables, 50, 2, 150),
-                new TypeAndUntype(variables, "YEET", 4, 250, 1000)
+                // new TypeAndUntype(variables, "YEET", 4, 250, 1000)
                 // new Paragraph(variables, phrases, 200)
             };
 
