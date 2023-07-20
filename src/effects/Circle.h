@@ -1,13 +1,13 @@
-#ifndef EFFECT_H
-#define EFFECT_H
-#include <Effect.h>
-#endif
+// #ifndef EFFECT_H
+// #define EFFECT_H
+// #include <Effect.h>
+// #endif
 
 
 class Circle : public Effect
 {
     public:
-        Circle(EffectSharedData variables) : Effect(variables) { }
+        Circle(EffectData variables) : Effect(variables) { }
         
         void loop()
         {

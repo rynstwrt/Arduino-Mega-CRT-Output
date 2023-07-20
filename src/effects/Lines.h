@@ -1,7 +1,7 @@
-#ifndef EFFECT_H
-#define EFFECT_H
-#include <Effect.h>
-#endif
+// #ifndef EFFECT_H
+// #define EFFECT_H
+// #include <Effect.h>
+// #endif
 
 class Lines : public Effect
 {
@@ -21,7 +21,7 @@ class Lines : public Effect
         }
             
     public:
-        Lines(EffectSharedData variables, int numLines, int delay) : Effect(variables) 
+        Lines(EffectData variables, int numLines, int delay) : Effect(variables) 
         { 
             this->numLines = numLines;
             this->delay = delay;

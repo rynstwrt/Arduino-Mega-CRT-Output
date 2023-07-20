@@ -8,7 +8,7 @@ class Pixels : public Effect
         int delay;
 
     public:
-        Pixels(EffectSharedData variables, int numPixelsPerFrame, int pixelWidth, int delay) : Effect(variables)
+        Pixels(EffectData variables, int numPixelsPerFrame, int pixelWidth, int delay) : Effect(variables)
         {
             this->numPixelsPerFrame = numPixelsPerFrame;
             this->pixelWidth = pixelWidth;

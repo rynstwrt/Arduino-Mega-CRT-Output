@@ -8,20 +8,17 @@
     on the RCA plug for a very small subset of TVs.
 */
 
-
 #include <Arduino.h>
 #include <TVout.h>
-#include <EffectManager.h>
+#include <EffectEngine.h>
 
 #define SERIAL_BAUD_RATE 500000
 #define WIDTH 128
 #define HEIGHT 96
 #define ACTIVE_EFFECT_INDEX 7
 
-
 TVout TV;
-EffectManager* fxManager;
-
+EffectEngine* fxManager;
 
 void setup()
 {
@@ -29,12 +26,11 @@ void setup()
 
     TV.begin(NTSC, WIDTH, HEIGHT);
 
-    EffectSharedData variables = { TV, WIDTH, HEIGHT };
-    fxManager = new EffectManager(variables);
+    EffectData variables = { TV, WIDTH, HEIGHT };
+    fxManager = new EffectEngine(variables);
     fxManager->setEffectIndex(ACTIVE_EFFECT_INDEX);
     fxManager->setupEffect();
 }
-
 
 void loop()
 {

@@ -1,5 +1,5 @@
 #include <TVout.h>
-#include <EffectSharedData.h>
+#include <structs/EffectData.h>
 
 class Effect
 {
@@ -12,7 +12,7 @@ class Effect
 
     public:
         Effect() { }
-        Effect(EffectSharedData variables)
+        Effect(EffectData variables)
         {
             this->TV = variables.TV;
             this->width = variables.width;

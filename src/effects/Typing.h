@@ -1,8 +1,8 @@
 #include <Arduino.h>
-#ifndef EFFECT_H
-#define EFFECT_H
-#include <Effect.h>
-#endif
+// #ifndef EFFECT_H
+// #define EFFECT_H
+// #include <Effect.h>
+// #endif
 #include <../lib/TVoutfonts/fontALL.h>
 
 class Typing : public Effect 
@@ -14,7 +14,7 @@ class Typing : public Effect
         int delay;
 
     public:
-        Typing(EffectSharedData variables, String text, int delay = 500) : Effect(variables) 
+        Typing(EffectData variables, String text, int delay = 500) : Effect(variables) 
         {
             this->originalText = text;
             this->text = text;

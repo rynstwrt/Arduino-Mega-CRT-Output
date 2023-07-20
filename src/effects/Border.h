@@ -1,7 +1,7 @@
-#ifndef EFFECT_H
-#define EFFECT_H
-#include <Effect.h>
-#endif
+// #ifndef EFFECT_H
+// #define EFFECT_H
+// #include <Effect.h>
+// #endif
 
 class Border : public Effect 
 {
@@ -9,7 +9,7 @@ class Border : public Effect
         int padding;
 
     public:
-        Border(EffectSharedData variables, int padding) : Effect(variables) 
+        Border(EffectData variables, int padding) : Effect(variables) 
         {
             this->padding = padding;
         }

@@ -1,8 +1,8 @@
 #include <Arduino.h>
-#ifndef EFFECT_H
-#define EFFECT_H
-#include <Effect.h>
-#endif
+// #ifndef EFFECT_H
+// #define EFFECT_H
+// #include <Effect.h>
+// #endif
 
 class Equalizer : public Effect
 {
@@ -35,7 +35,7 @@ class Equalizer : public Effect
         }
 
     public:
-        Equalizer(EffectSharedData variables, int numBars, int barThickness) : Effect(variables)
+        Equalizer(EffectData variables, int numBars, int barThickness) : Effect(variables)
         {
             this->numBars = numBars;
             this->barThickness = barThickness;
