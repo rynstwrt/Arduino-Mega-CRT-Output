@@ -3,11 +3,13 @@
 #include <Effect.h>
 #endif 
 
+
 class Lines : public Effect
 {
     private:
         int numLines;
         int delay;
+
 
         void drawRandomLine()
         {
@@ -20,12 +22,14 @@ class Lines : public Effect
             TV.draw_line(point1X, point1Y, point2X, point2Y, WHITE);
         }
             
+
     public:
-        Lines(EffectData variables, int numLines, int delay) : Effect(variables) 
+        Lines(EffectDataStructure variables, int numLines, int delay) : Effect(variables) 
         { 
             this->numLines = numLines;
             this->delay = delay;
         }
+
 
         void loop()
         {

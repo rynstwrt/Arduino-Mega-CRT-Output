@@ -1,5 +1,6 @@
 #include <TVout.h>
-#include <structs/EffectData.h>
+#include <util/EffectDataStructure.h>
+
 
 class Effect
 {
@@ -10,15 +11,21 @@ class Effect
         static int xCenter;
         static int yCenter;
 
+
     public:
         Effect() { }
-        Effect(EffectData variables)
+        Effect(EffectDataStructure variables)
         {
             this->TV = variables.TV;
             this->width = variables.width;
             this->height = variables.height;
             this->xCenter = width / 2;
             this->yCenter = height / 2;
+        }
+
+        TVout getTV()
+        {
+            return this->TV;
         }
 
         virtual void setup() { };

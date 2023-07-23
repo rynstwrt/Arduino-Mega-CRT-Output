@@ -8,31 +8,28 @@
     on the RCA plug for a very small subset of TVs.
 */
 
+
 #include <Arduino.h>
-#include <TVout.h>
-#include <EffectEngine.h>
+#include <CRTRunner.h>
+#include <util/EffectNames.h>
 
 #define SERIAL_BAUD_RATE 500000
-#define WIDTH 128
-#define HEIGHT 96
-#define ACTIVE_EFFECT_INDEX 3
+#define DISPLAY_WIDTH 128
+#define DISPLAY_HEIGHT 96
 
-TVout TV;
-EffectEngine* fxManager;
+
+CRTRunner* runner = new CRTRunner(SERIAL_BAUD_RATE, DISPLAY_WIDTH, DISPLAY_HEIGHT);
+int currentEffect = EffectNames::LINES;
+
 
 void setup()
-{
+{   
     Serial.begin(SERIAL_BAUD_RATE);
-
-    TV.begin(NTSC, WIDTH, HEIGHT);
-
-    EffectData variables = { TV, WIDTH, HEIGHT };
-    fxManager = new EffectEngine(variables);
-    fxManager->setEffectIndex(ACTIVE_EFFECT_INDEX);
-    fxManager->setupEffect();
+    runner->setEffect(currentEffect);
 }
+
 
 void loop()
 {
-    fxManager->runEffect();
+    runner->loop();
 }

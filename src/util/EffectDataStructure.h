@@ -1,7 +1,7 @@
 #include <TVout.h>
 
 
-struct EffectData
+struct EffectDataStructure
 {
     TVout TV;
     int width;

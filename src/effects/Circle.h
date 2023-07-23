@@ -6,8 +6,16 @@
 
 class Circle : public Effect
 {
+    private:
+        int delay;
+
+
     public:
-        Circle(EffectData variables) : Effect(variables) { }
+        Circle(EffectDataStructure variables, int delay) : Effect(variables) 
+        { 
+            this->delay = delay;
+        }
+        
         
         void loop()
         {
@@ -28,6 +36,6 @@ class Circle : public Effect
             else if (radius == 0)
                 increasing = !increasing;
 
-            TV.delay(30);
+            TV.delay(this->delay);
         }
 };

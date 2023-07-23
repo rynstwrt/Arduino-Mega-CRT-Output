@@ -3,10 +3,12 @@
 #include <Effect.h>
 #endif
 
+
 class SpacedShapes : public Effect
 {
     private:
         int shapeWidth, shapeHeight = 0;
+
 
         void drawShapes()
         {
@@ -26,17 +28,20 @@ class SpacedShapes : public Effect
             }
         }
 
+
     public:
-        SpacedShapes(EffectData variables, int shapeWidth, int shapeHeight)
+        SpacedShapes(EffectDataStructure variables, int shapeWidth, int shapeHeight)
         {
             this->shapeWidth = shapeWidth;
             this->shapeHeight = shapeHeight;
         }
 
+
         void setup()
         {
             this->drawShapes();
         }
+
 
         void loop()
         {

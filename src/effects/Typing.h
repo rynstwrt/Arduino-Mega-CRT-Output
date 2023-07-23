@@ -5,6 +5,7 @@
 #endif
 #include <../lib/TVoutfonts/fontALL.h>
 
+
 class Typing : public Effect 
 {
     private:
@@ -13,18 +14,21 @@ class Typing : public Effect
         bool firstText = true;
         int delay;
 
+
     public:
-        Typing(EffectData variables, String text, int delay = 500) : Effect(variables) 
+        Typing(EffectDataStructure variables, String text, int delay = 500) : Effect(variables) 
         {
             this->originalText = text;
             this->text = text;
             this->delay = delay;
         }
 
+
         void setup()
         {
             TV.select_font(font6x8);            
         }
+
 
         void loop()
         {
